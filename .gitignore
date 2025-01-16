@@ -1,0 +1,18 @@
+# Byte-compiled Python files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment and package management
+env/
+.venv/
+*.env
+Pipfile
+Pipfile.lock
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# macOS and Linux system files
+.DS_Store
+.vscode/
