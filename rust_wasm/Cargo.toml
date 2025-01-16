@@ -1,0 +1,30 @@
+[package]
+name = "rust_wasm"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# WebAssembly Bindgen for WASM bindings
+wasm-bindgen = "0.2"
+# Geo library for geospatial calculations
+geo = "0.24"
+geojson = "0.22"
+
+# Serde for serialization/deserialization
+serde = { version = "1.0", features = ["derive"] }
+# Serde JSON for handling JSON data
+serde_json = "1.0"
+
+[dependencies.wasi]
+version = "0.11.0" # Add WASI compatibility
+
+[lib]
+# Define the crate types
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "normalization" # Name for the binary
+path = "src/main.rs"   # Path to the binary entry point
+
+[profile.release]
+lto = true # Enable Link-Time Optimization for smaller binaries
